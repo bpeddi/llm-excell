@@ -1,0 +1,17 @@
+@startuml C4_Elements
+!include plantUML/C4_Container.puml
+
+Person(personAlias, "End user", "user uploads Excel file")
+System_Boundary(llm_system,"Large Language Model with Langchain Q&A") { 
+Container(streamlit, "FrontEnd", "StreamLit App", "Streamlit provides UI")
+System(Langchain, "LanchainAPI", "Provides LLM Chain to Query Excel file")
+
+}
+System(OpenAI, "OpenAI LLM", "Query Excel file and return output")
+
+
+Rel(personAlias, streamlit, "Label", "Optional Technology")
+Rel(streamlit, Langchain, "Label", "Optional Technology")
+Rel(Langchain, OpenAI, "Label", "Optional Technology")
+
+@enduml
