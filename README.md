@@ -83,5 +83,5 @@
 - **run_agent**: Creates the CSV agent using OpenAI and processes the user’s question to generate results.
 - **main**: The entry point of the application. It sets up the page, loads environment variables, and runs the core functions.
 
-![Example Image](images/example.png "Streamlit Interface")
+![Example Image](Images/example.png "Streamlit Interface")
 
